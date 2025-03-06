@@ -1,0 +1,84 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4952FF;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px 20px;
+
+  .navigation {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      .logo {
+        height: 14px;
+      }
+      margin-right: 26px;
+    }
+
+    .app-name {
+      font-size: 16px;
+      line-height: 24px;
+      color: white;
+      margin-right: 60px;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+
+      li {
+        padding: 0 12px;
+
+        a {
+          font-family: 'Cera PRO', Arial, sans-serif;
+          display: flex;
+          color: white;
+          text-decoration: none;
+          font-size: 14px;
+          line-height: 20px;
+          padding: 6px 0 4px 0;
+          border-bottom: 2px solid transparent;
+
+          &:hover, &.active {
+            border-color: white;
+          }
+        }
+
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+
+    li {
+      margin-right: 12px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .user {
+      width: 24px;
+      height: 24px;
+
+      &-avatar {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        line-height: 20px;
+        justify-content: center;
+      }
+    }
+  }
+}

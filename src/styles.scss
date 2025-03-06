@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@forward 'app/assets/styles/index';
+
+.emails {
+  @include mat.table-overrides((
+    background-color: white,
+    header-headline-color: #6B778C,
+    row-item-container-height: 40px,
+    header-container-height: 40px,
+    header-headline-weight: bold,
+    row-item-outline-width: 0,
+  ));
+}
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
