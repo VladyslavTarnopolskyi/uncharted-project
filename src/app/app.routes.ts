@@ -10,18 +10,28 @@ export const routes: Routes = [
   },
   {
     path: EPagePath.requests,
-
     children: [
       {
         path: '',
         pathMatch: 'full',
         loadComponent: () => import('./pages/requests/requests.component').then(m => m.RequestsComponent),
-        title: 'Emails',
+        title: 'Requests',
       },
       {
-        path: ':id',
-        loadComponent: () => import('./pages/requests/detailed-request/detailed-request.component').then(m => m.DetailedRequestComponent),
-        title: 'Email',
+        path: EPagePath.request,
+        children: [
+          {
+            path: '',
+            pathMatch: 'full',
+            loadComponent: () => import('./pages/requests/request/request.component').then(m => m.RequestComponent),
+            title: 'Request',
+          },
+          {
+            path: ':id',
+            loadComponent: () => import('./pages/requests/detailed-request/detailed-request.component').then(m => m.DetailedRequestComponent),
+            title: 'Request',
+          },
+        ]
       },
     ],
   },

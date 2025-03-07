@@ -13,6 +13,11 @@
   @include mat.paginator-overrides((
     container-background-color: white,
   ));
+
+  @include mat.datepicker-overrides((
+    calendar-date-selected-state-background-color: #F4F5F7,
+  ));
+
 }
 
 html {

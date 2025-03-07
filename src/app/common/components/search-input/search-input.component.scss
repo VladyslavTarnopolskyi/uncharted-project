@@ -1,0 +1,23 @@
+.input {
+  border-radius: 3px;
+  width: 240px;
+
+  &-label {
+    display: flex;
+    position: relative;
+
+    .img {
+      position: absolute;
+      top: calc(50% - 12px);
+      right: 8px;
+    }
+  }
+
+  &.search {
+    border: 2px solid #DFE1E6;
+    background: #FAFBFC;
+    border-radius: 3px;
+    padding: 4px 36px 4px 6px;
+    width: 240px;
+  }
+}

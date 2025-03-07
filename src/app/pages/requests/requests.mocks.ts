@@ -1,31 +1,225 @@
-import { IEmail } from '../../common/models/base.model';
+import {
+  IRequests,
+  ERequestFields,
+  ERequestStatus,
+  IRequest,
+  EDetailRequestFields,
+  ERecipeStatus
+} from '../../common/models/base.model';
 
-export const EMAILS_DATA: IEmail[] = [
+export const REQUESTS_DATA: IRequests[] = [
   {
     id: 1,
-    subject: 'Hi Team, I share with you my check',
-    date: new Date(2022, 2, 2).toISOString(),
-    fullName: 'Test User',
-    email: 'email@r.com',
-    status: 'status',
-    talentSpecialist: 'test'
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
   },
   {
-    id: 2,
-    subject: 'Hi Team, I share with you my check',
-    date: new Date(2022, 2, 2).toISOString(),
-    fullName: 'Test User',
-    email: 'email@r.com',
-    status: 'new',
-    talentSpecialist: 'test'
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
   },
   {
-    id: 3,
-    subject: 'Hi Team, I share with you my check',
-    date: new Date(2022, 2, 2).toISOString(),
-    fullName: 'Test User',
-    email: 'email@r.com',
-    status: 'status',
-    talentSpecialist: 'test'
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
+  },
+  {
+    id: 1,
+    [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
+    [ERequestFields.fullName]: 'Andrii Mykytenko',
+    [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
+    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.benefitProgram]: 'Custom',
+    [ERequestFields.location]: 'Ukraine',
+    [ERequestFields.totalUsed]: 0
   },
 ];
+
+export const REQUEST_DATA: IRequest[] = [
+  {
+    id: 1,
+    [EDetailRequestFields.transactionDate]: new Date(2025, 2, 2).toISOString(),
+    [EDetailRequestFields.category]: 'Sport',
+    [EDetailRequestFields.fullName]: 'Andrii Mykytenko',
+    [EDetailRequestFields.recipient]: 'Amazon',
+    [EDetailRequestFields.recipeAmountLocal]: '100 UAH',
+    [EDetailRequestFields.recipeAmountUSD]: '10',
+    [EDetailRequestFields.paymentPurpose]: 'Dance',
+    [EDetailRequestFields.recipeStatus]: ERecipeStatus.waiting,
+  }
+]

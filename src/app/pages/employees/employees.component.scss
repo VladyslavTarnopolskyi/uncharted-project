@@ -1,4 +1,25 @@
+@use '../../assets/styles/mixins' as m;
+
 .employees {
-  height: 100%;
-  padding: 24px;
+  margin: 24px;
+  @include m.box-wrapper;
+
+  .headline {
+    padding: 24px;
+
+    h3 {
+      color: #172B4D;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 26px;
+    }
+
+    .action-form {
+      display: flex;
+
+      .search-input {
+        margin-right: 8px;
+      }
+    }
+  }
 }

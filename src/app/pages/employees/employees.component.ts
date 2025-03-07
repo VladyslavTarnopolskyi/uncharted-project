@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 import { EEmployeeFields, IEmployee } from '../../common/models/base.model';
 import { EMPLOYEES_DATA } from './employees.mock';
 import { MatPaginator } from '@angular/material/paginator';
+import { DatePickerComponent } from '../../common/components/date-picker/date-picker.component';
+import { SearchInputComponent } from '../../common/components/search-input/search-input.component';
 
 @Component({
   selector: 'app-employees',
@@ -27,6 +29,8 @@ import { MatPaginator } from '@angular/material/paginator';
     MatColumnDef,
     MatHeaderCellDef,
     MatPaginator,
+    DatePickerComponent,
+    SearchInputComponent,
   ],
   templateUrl: './employees.component.html',
   styleUrl: './employees.component.scss'

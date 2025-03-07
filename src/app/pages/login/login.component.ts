@@ -12,8 +12,14 @@ export class LoginComponent {
   authService = inject(AuthService);
   router = inject(Router);
 
+  isEmailLogin = false;
+
   onLogin(): void {
     this.authService.login();
     this.router.navigate(['/employees']);
+  }
+
+  selectEmailLogin() {
+    this.isEmailLogin = !this.isEmailLogin;
   }
 }

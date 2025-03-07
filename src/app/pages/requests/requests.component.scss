@@ -1,5 +1,11 @@
+@use '../../assets/styles/mixins' as m;
+
 .mat-mdc-cell.mat-column-fullName {
   color: #4952FF;
+}
+
+.mat-mdc-cell.mat-column-totalUsed{
+  text-align: right;
 }
 
 .mat-column-status .text-wrapper {
@@ -21,6 +27,29 @@
 }
 
 .requests {
-  height: 100%;
-  padding: 24px;
+  margin: 24px;
+  @include m.box-wrapper;
+
+  .headline {
+    padding: 24px;
+  }
+
+  .content {
+    padding-bottom: 24px;
+  }
+
+  h3 {
+    color: #172B4D;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 26px;
+  }
+
+  .action-form {
+    display: flex;
+  }
+
+  .search-input {
+    margin-right: 8px;
+  }
 }

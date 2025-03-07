@@ -7,11 +7,16 @@
         <span>Sign in with Microsoft</span>
       </button>
       <div class="divider"></div>
-      <label class="email">
-        <input class="email-input" type="email" placeholder="Enter your work email address">
-        <img class="email-img" src="./app/assets/images/mail.svg" alt="mail">
-      </label>
-      <button class="submit" (click)="onLogin()">Continue</button>
+
+      @if (isEmailLogin) {
+        <label class="email">
+          <input class="email-input" type="email" placeholder="Enter your work email address">
+          <img class="email-img" src="./app/assets/images/mail.svg" alt="mail">
+        </label>
+        <button class="submit" (click)="onLogin()">Continue</button>
+      } @else {
+        <div class="second-option" (click)="selectEmailLogin()">Log in with Email and Password</div>
+      }
     </div>
     <div class="welcome-box">
       <h2>Welcome to Trinetix Benefit Portal</h2>

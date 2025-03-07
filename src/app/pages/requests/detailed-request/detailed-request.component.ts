@@ -19,6 +19,10 @@ export class DetailedRequestComponent implements OnInit {
     senderName: new FormControl('test'),
     recName: new FormControl('rec 22'),
     amount: new FormControl(900),
+    amountUSD: new FormControl(0),
+    purposePayment: new FormControl(''),
+    date: new FormControl(new Date()),
+    category: new FormControl(''),
   });
 
   ngOnInit(): void {
@@ -27,5 +31,6 @@ export class DetailedRequestComponent implements OnInit {
 
   approve() {
     this.profileForm.getRawValue();
+    // todo send data
   }
 }

@@ -1,36 +1,52 @@
 <div class="detailed-page">
-  <ul class="breadcrumbs">
-    <li><a routerLink="/emails">Emails</a></li>
-    <li>/</li>
-    <li>{{emailId}}</li>
-  </ul>
-  <mat-form-field class="comment-input">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..." rows="10" ></textarea>
-  </mat-form-field>
-
-  <div class="review-AI">
-    <div>
-      <img src="../../../assets/images/Screenshot%202025-03-06%20at%2022.39.31%201.png" alt="">
+  <div class="photo-proof">
+    <img src="./app/assets/images/Screenshot%202025-03-06%20at%2022.39.31%201.png" alt="image">
+  </div>
+  <div class="aside">
+    <div class="user-info">
+      <h4>Andrii Mykytenko</h4>
+      <p>
+        Hello, <br>
+        I am sending the receipt for the English lesson. <br>
+        Have a great day!
+      </p>
     </div>
     <form class="attachment-form-group" [formGroup]="profileForm">
-      <mat-form-field class="base-input">
-        <mat-label>Payer (Sender) Information</mat-label>
-        <input matInput placeholder="Type..." formControlName="senderName">
-      </mat-form-field>
-      <mat-form-field class="base-input">
-        <mat-label>Recipient (Receiver) Information</mat-label>
-        <input matInput placeholder="Type..." formControlName="recName">
-      </mat-form-field>
-      <mat-form-field class="base-input">
-        <mat-label>Amount (Current)</mat-label>
-        <input matInput placeholder="Type..." formControlName="amount">
-      </mat-form-field>
-      <div class="example-button-row">
-        <button mat-flat-button (click)="approve()">Approved</button>
-        <button mat-stroked-button>Resubmit data</button>
-        <button mat-stroked-button>Reject</button>
-      </div>
+      <label class="input-label">
+        Payer (Sender) Information
+        <input class="input text" type="text" placeholder="Type..." formControlName="senderName">
+      </label>
+      <label class="input-label">
+        Recipient (Receiver) Information
+        <input class="input text" type="text" placeholder="Type..." formControlName="recName">
+      </label>
+      <label class="input-label">
+        Amount (Current)
+        <input class="input text" type="number" placeholder="Type..." formControlName="amount">
+      </label>
+      <label class="input-label">
+        Amount (USD)
+        <input class="input text" type="number" placeholder="Type..." formControlName="amountUSD">
+      </label>
+      <label class="input-label">
+        Purpose of Payment
+        <input class="input text" type="text" placeholder="Type..." formControlName="purposePayment">
+      </label>
+      <label class="input-label">
+        Date of Transaction:
+        <input class="input text" type="date" placeholder="Type..." formControlName="date">
+      </label>
+      <label class="input-label">
+        Category
+        <input class="input text" type="date" placeholder="Type..." formControlName="category">
+      </label>
+
     </form>
   </div>
+  <div class="action-button-row">
+    <button mat-flat-button (click)="approve()">Approved</button>
+    <button mat-stroked-button>Resubmit data</button>
+    <button mat-stroked-button>Reject</button>
+  </div>
+
 </div>

@@ -1,0 +1,21 @@
+.input {
+  border-radius: 3px;
+  width: 240px;
+
+  &-label {
+    display: flex;
+    position: relative;
+
+    .img {
+      position: absolute;
+      top: calc(50% - 12px);
+      right: 8px;
+    }
+  }
+
+  &.date {
+    background: #F4F5F7;
+    border: none;
+    padding: 6px 32px 6px 8px;
+  }
+}

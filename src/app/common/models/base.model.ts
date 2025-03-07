@@ -8,15 +8,35 @@ export enum EPagePath {
   employees = 'employees',
   dashboard = 'dashboard',
   login = 'login',
+  request = 'request',
 }
 
-export enum EEmailFields {
-  subject = 'subject',
-  date = 'date',
-  fullName = 'fullName',
+export enum ERequestFields {
+  requestDate = 'requestDate',
   email = 'email',
-  status = 'status',
-  talentSpecialist = 'talentSpecialist',
+  fullName = 'fullName',
+  requestStatus = 'requestStatus',
+  benefitProgram = 'benefitProgram',
+  location = 'location',
+  totalUsed = 'totalUsed',
+}
+
+export enum EDetailRequestFields {
+  transactionDate = 'transactionDate',
+  category = 'category',
+  fullName = 'fullName',
+  recipient = 'recipient',
+  recipeAmountLocal = 'recipeAmountLocal',
+  recipeAmountUSD = 'recipeAmountUSD',
+  paymentPurpose = 'paymentPurpose',
+  recipeStatus = 'recipeStatus',
+}
+
+export enum ERecipeStatus {
+  waiting = 'Waiting for Clarification',
+  declined = 'Declined',
+  cancelled = 'Cancelled',
+  approved = 'Approved',
 }
 
 export enum EEmployeeFields {
@@ -29,14 +49,33 @@ export enum EEmployeeFields {
   totalUsedCompensation = 'totalUsedCompensation',
 }
 
-export interface IEmail {
+export enum ERequestStatus {
+  open = 'Open',
+  waiting = 'Waiting for Clarification',
+  processed = 'Processed',
+}
+
+export interface IRequests {
   id: number,
-  [EEmailFields.subject]: string;
-  [EEmailFields.date]: string;
-  [EEmailFields.fullName]: string;
-  [EEmailFields.email]: string;
-  [EEmailFields.status]: string;
-  [EEmailFields.talentSpecialist]: string;
+  [ERequestFields.requestDate]: string;
+  [ERequestFields.requestStatus]: ERequestStatus;
+  [ERequestFields.fullName]: string;
+  [ERequestFields.email]: string;
+  [ERequestFields.benefitProgram]: string;
+  [ERequestFields.location]: string;
+  [ERequestFields.totalUsed]: number;
+}
+
+export interface IRequest {
+  id: number,
+  [EDetailRequestFields.transactionDate]: string;
+  [EDetailRequestFields.category]: string;
+  [EDetailRequestFields.fullName]: string;
+  [EDetailRequestFields.recipient]: string;
+  [EDetailRequestFields.recipeAmountLocal]: string;
+  [EDetailRequestFields.recipeAmountUSD]: string;
+  [EDetailRequestFields.paymentPurpose]: string;
+  [EDetailRequestFields.recipeStatus]: ERecipeStatus;
 }
 
 export interface IEmployee {

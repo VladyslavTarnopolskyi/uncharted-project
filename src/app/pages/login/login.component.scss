@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+    background: white;
 
     .logo {
       margin-top: 16px;
@@ -83,6 +84,14 @@
       &:hover {
         cursor: pointer;
       }
+    }
+
+    .second-option {
+      text-align: center;
+      color: #3F51B5;
+      line-height: 17px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     .divider {
