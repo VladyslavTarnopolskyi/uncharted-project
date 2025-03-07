@@ -8,10 +8,10 @@ import { MatButton } from '@angular/material/button';
 @Component({
   selector: 'app-detailed-email',
   imports: [FormsModule, MatFormFieldModule, MatInputModule, RouterLink, ReactiveFormsModule, MatButton],
-  templateUrl: './detailed-email.component.html',
-  styleUrl: './detailed-email.component.scss'
+  templateUrl: './detailed-request.component.html',
+  styleUrl: './detailed-request.component.scss'
 })
-export class DetailedEmailComponent implements OnInit {
+export class DetailedRequestComponent implements OnInit {
   private readonly AR = inject(ActivatedRoute);
   public emailId: string = '';
 

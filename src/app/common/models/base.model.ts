@@ -3,6 +3,13 @@ export interface IPages {
   path: string;
 }
 
+export enum EPagePath {
+  requests = 'requests',
+  employees = 'employees',
+  dashboard = 'dashboard',
+  login = 'login',
+}
+
 export enum EEmailFields {
   subject = 'subject',
   date = 'date',

@@ -14,12 +14,8 @@ import { IPages } from '../../models/base.model';
 export class HeaderComponent {
   pages: IPages[] = [
     {
-      title: 'Dashboard',
-      path: 'dashboard',
-    },
-    {
-      title: 'Emails',
-      path: 'emails',
+      title: 'Requests',
+      path: 'requests',
     },
     {
       title: 'Employees',

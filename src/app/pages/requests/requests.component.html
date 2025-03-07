@@ -1,4 +1,4 @@
-<div class="emails">
+<div class="requests">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     @for (column of columns; track column) {
       <ng-container [matColumnDef]="column.name">
@@ -23,5 +23,11 @@
       (click)="openDetail(row)"
     ></tr>
   </table>
-
+  <mat-paginator
+    [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    showFirstLastButtons
+    aria-label="Select page"
+  ></mat-paginator>
 </div>

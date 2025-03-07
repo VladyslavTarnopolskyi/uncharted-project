@@ -1,30 +1,32 @@
 import { Routes } from '@angular/router';
+import { EPagePath } from './common/models/base.model';
 
 export const routes: Routes = [
   {
-    path: 'dashboard',
+    path: EPagePath.dashboard,
     pathMatch: 'full',
     loadComponent: () => import('./pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
     title: 'Dashboard',
   },
   {
-    path: 'emails',
+    path: EPagePath.requests,
+
     children: [
       {
         path: '',
         pathMatch: 'full',
-        loadComponent: () => import('./pages/emails/emails.component').then(m => m.EmailsComponent),
+        loadComponent: () => import('./pages/requests/requests.component').then(m => m.RequestsComponent),
         title: 'Emails',
       },
       {
         path: ':id',
-        loadComponent: () => import('./pages/emails/detailed-email/detailed-email.component').then(m => m.DetailedEmailComponent),
+        loadComponent: () => import('./pages/requests/detailed-request/detailed-request.component').then(m => m.DetailedRequestComponent),
         title: 'Email',
       },
     ],
   },
   {
-    path: 'employees',
+    path: EPagePath.employees,
     children: [
       {
         path: '',
@@ -40,12 +42,12 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'login',
+    path: EPagePath.login,
     loadComponent: () => import('./pages/login/login.component').then(m => m.LoginComponent),
     title: 'Login',
   },
   {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: EPagePath.login,
   },
 ];
