@@ -1,5 +1,7 @@
-<app-header></app-header>
-<main class="page">
+@if (idLogged) {
+  <app-header></app-header>
+}
+<main class="page" [class.isLogin]="!idLogged">
   <router-outlet></router-outlet>
 </main>
 

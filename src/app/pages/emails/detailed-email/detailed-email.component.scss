@@ -1,0 +1,33 @@
+.detailed-page {
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    li {
+      padding-right: 5px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .comment-input {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .review-AI {
+    display: flex;
+
+    .attachment-form-group {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .mat-mdc-button-base {
+    margin-right: 15px;
+  }
+}

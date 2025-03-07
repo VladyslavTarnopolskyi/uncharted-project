@@ -1,0 +1,36 @@
+<div class="detailed-page">
+  <ul class="breadcrumbs">
+    <li><a routerLink="/emails">Emails</a></li>
+    <li>/</li>
+    <li>{{emailId}}</li>
+  </ul>
+  <mat-form-field class="comment-input">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..." rows="10" ></textarea>
+  </mat-form-field>
+
+  <div class="review-AI">
+    <div>
+      <img src="./app/assets/images/Screenshot%202025-03-06%20at%2022.39.31%201.png" alt="">
+    </div>
+    <form class="attachment-form-group" [formGroup]="profileForm">
+      <mat-form-field class="base-input">
+        <mat-label>Payer (Sender) Information</mat-label>
+        <input matInput placeholder="Type..." formControlName="senderName">
+      </mat-form-field>
+      <mat-form-field class="base-input">
+        <mat-label>Recipient (Receiver) Information</mat-label>
+        <input matInput placeholder="Type..." formControlName="recName">
+      </mat-form-field>
+      <mat-form-field class="base-input">
+        <mat-label>Amount (Current)</mat-label>
+        <input matInput placeholder="Type..." formControlName="amount">
+      </mat-form-field>
+      <div class="example-button-row">
+        <button mat-flat-button (click)="approve()">Approved</button>
+        <button mat-stroked-button>Resubmit data</button>
+        <button mat-stroked-button>Reject</button>
+      </div>
+    </form>
+  </div>
+</div>

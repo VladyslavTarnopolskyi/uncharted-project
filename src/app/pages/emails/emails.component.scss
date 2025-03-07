@@ -1,11 +1,21 @@
-.mat-mdc-header-cell, .mat-mdc-cell {
-  vertical-align: middle;
-}
-
-.mat-mdc-header-cell {
-  border-bottom: 2px solid #DFE1E6;
-}
-
 .mat-mdc-cell.mat-column-fullName {
   color: #4952FF;
+}
+
+.mat-column-status .text-wrapper {
+  display: inline-flex;
+  text-align: center;
+  border-radius: 3px;
+  background: #DFE1E6;
+  color: #42526E;
+  padding: 0 4px;
+  line-height: 16px;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+
+  &.new {
+    color: white;
+    background: #9E00FF;
+  }
 }

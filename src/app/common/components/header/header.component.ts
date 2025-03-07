@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { IPages } from '../../models/base';
+import { IPages } from '../../models/base.model';
 
 @Component({
   selector: 'app-header',

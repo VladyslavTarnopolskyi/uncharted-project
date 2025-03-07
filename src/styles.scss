@@ -1,7 +1,7 @@
 @use '@angular/material' as mat;
 @forward 'app/assets/styles/index';
 
-.emails {
+.page {
   @include mat.table-overrides((
     background-color: white,
     header-headline-color: #6B778C,
@@ -9,6 +9,9 @@
     header-container-height: 40px,
     header-headline-weight: bold,
     row-item-outline-width: 0,
+  ));
+  @include mat.paginator-overrides((
+    container-background-color: white,
   ));
 }
 

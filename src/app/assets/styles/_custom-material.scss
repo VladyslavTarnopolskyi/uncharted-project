@@ -1,0 +1,11 @@
+.mat-mdc-header-cell, .mat-mdc-cell {
+  vertical-align: middle;
+}
+
+.mat-mdc-table {
+  border-bottom: 2px solid #DFE1E6 !important;
+
+  .mat-mdc-header-cell {
+    border-bottom: 2px solid #DFE1E6;
+  }
+}
