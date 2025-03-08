@@ -1,5 +1,12 @@
 @use '../../assets/styles/mixins' as m;
 
+.mat-mdc-cell {
+  &.mat-column-totalUsedCompensation, &.mat-column-totalCompensation, {
+    text-align: right;
+  }
+}
+
+
 .employees {
   margin: 24px;
   @include m.box-wrapper;

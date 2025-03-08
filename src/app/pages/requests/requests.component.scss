@@ -1,9 +1,5 @@
 @use '../../assets/styles/mixins' as m;
 
-.mat-mdc-cell.mat-column-fullName {
-  color: #4952FF;
-}
-
 .mat-mdc-cell.mat-column-requestStatus {
   .status {
     font-size: 10px;

@@ -97,7 +97,7 @@ export interface IRequest {
 }
 
 export interface IEmployee {
-  id: number,
+  id: string,
   [EEmployeeFields.fullName]: string;
   [EEmployeeFields.role]: string;
   [EEmployeeFields.department]: string;
