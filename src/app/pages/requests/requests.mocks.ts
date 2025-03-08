@@ -63,7 +63,7 @@ export const REQUESTS_DATA: IRequests[] = [
     [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
     [ERequestFields.fullName]: 'Andrii Mykytenko',
     [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
-    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.requestStatus]: ERequestStatus.processed,
     [ERequestFields.benefitProgram]: 'Custom',
     [ERequestFields.location]: 'Ukraine',
     [ERequestFields.totalUsed]: 0
@@ -113,7 +113,7 @@ export const REQUESTS_DATA: IRequests[] = [
     [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
     [ERequestFields.fullName]: 'Andrii Mykytenko',
     [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
-    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.requestStatus]: ERequestStatus.waiting,
     [ERequestFields.benefitProgram]: 'Custom',
     [ERequestFields.location]: 'Ukraine',
     [ERequestFields.totalUsed]: 0
@@ -133,7 +133,7 @@ export const REQUESTS_DATA: IRequests[] = [
     [ERequestFields.requestDate]: new Date(2025, 2, 2).toISOString(),
     [ERequestFields.fullName]: 'Andrii Mykytenko',
     [ERequestFields.email]: 'andrii.mykytenko@trinetix.com',
-    [ERequestFields.requestStatus]: ERequestStatus.open,
+    [ERequestFields.requestStatus]: ERequestStatus.processed,
     [ERequestFields.benefitProgram]: 'Custom',
     [ERequestFields.location]: 'Ukraine',
     [ERequestFields.totalUsed]: 0

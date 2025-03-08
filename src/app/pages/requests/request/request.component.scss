@@ -1,5 +1,11 @@
 @use '../../../assets/styles/mixins' as m;
 
+.mat-mdc-cell.mat-column-recipeStatus {
+  .status {
+    @include m.status-label;
+  }
+}
+
 .request {
   margin: 24px;
 

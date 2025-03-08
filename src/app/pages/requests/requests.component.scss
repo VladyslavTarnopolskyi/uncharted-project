@@ -4,7 +4,31 @@
   color: #4952FF;
 }
 
-.mat-mdc-cell.mat-column-totalUsed{
+.mat-mdc-cell.mat-column-requestStatus {
+  .status {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 0 12px;
+    color: white;
+    display: inline-flex;
+    border-radius: 10px;
+    text-wrap: nowrap;
+
+    &.open {
+      background: #15803D;
+    }
+
+    &.waiting {
+      background: #DC2626;
+    }
+
+    &.processed {
+      background: #2B3674;
+    }
+  }
+}
+
+.mat-mdc-cell.mat-column-totalUsed {
   text-align: right;
 }
 
@@ -20,10 +44,6 @@
   font-size: 11px;
   text-transform: uppercase;
 
-  &.new {
-    color: white;
-    background: #9E00FF;
-  }
 }
 
 .requests {
@@ -52,4 +72,6 @@
   .search-input {
     margin-right: 8px;
   }
+
+
 }

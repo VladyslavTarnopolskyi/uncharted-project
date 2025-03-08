@@ -13,7 +13,7 @@ import {
   MatTable,
   MatTableDataSource
 } from '@angular/material/table';
-import { EDetailRequestFields, EPagePath, IRequest } from '../../../common/models/base.model';
+import { EDetailRequestFields, EPagePath, ERecipeStatus, IRequest } from '../../../common/models/base.model';
 import { Router } from '@angular/router';
 import { RequestsService } from '../requests.service';
 import { MatPaginator } from '@angular/material/paginator';
@@ -48,6 +48,7 @@ export class RequestComponent implements OnInit {
 
   dataSource = new MatTableDataSource<IRequest>([]);
   displayedColumns: string[] = Object.keys(EDetailRequestFields);
+  eStatus = ERecipeStatus;
   columns = [
     {
       name: EDetailRequestFields.transactionDate,
@@ -99,6 +100,10 @@ export class RequestComponent implements OnInit {
   }
 
   returnToPage() {
-    this.router.navigate([EPagePath.requests, EPagePath.request])
+    this.router.navigate([EPagePath.requests])
+  }
+
+  getStatus(status: ERecipeStatus) {
+    return this.eStatus.title[status];
   }
 }

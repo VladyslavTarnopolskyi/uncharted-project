@@ -14,3 +14,27 @@ app-root {
   display: flex;
   flex-direction: column;
 }
+
+.fill-btn {
+  border: none;
+  background: #3F51B5;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 3px;
+  line-height: 20px;
+  font-size: 14px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.outline-btn {
+  border: 1px solid #3F51B5;
+  background: white;
+  color: #3F51B5;
+  padding: 6px 12px;
+  border-radius: 3px;
+  line-height: 20px;
+  font-size: 14px;
+  margin-left: 16px;
+  cursor: pointer;
+}

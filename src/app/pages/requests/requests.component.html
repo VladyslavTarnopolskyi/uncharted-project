@@ -14,6 +14,10 @@
           <span class="text-wrapper {{element[column.name]}}">
             @if (column.name === 'requestDate') {
               {{ element[column.name] | date : 'dd/MM/yyyy hh:mm' }}
+            } @else if(column.name === 'requestStatus') {
+              <span class="status {{element[column.name]}}">
+                {{ getStatus(element[column.name]) }}
+              </span>
             } @else {
               {{ element[column.name] }}
             }

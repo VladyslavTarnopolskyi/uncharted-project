@@ -52,6 +52,9 @@
       }
 
       .bottom-footer {
+        display: flex;
+        align-items: center;
+        padding-left: 24px;
         background: black;
         height: 56px;
         width: 100%;
@@ -129,6 +132,4 @@
       text-transform: uppercase;
     }
   }
-
-
 }

@@ -1,0 +1,51 @@
+.mat-mdc-row.mdc-data-table__row {
+  &:hover {
+    cursor: default;
+  }
+}
+
+.user {
+  font-family: 'Cera PRO', Arial, sans-serif;
+  padding: 24px;
+
+  h2 {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    font-size: 24px;
+
+    .close-btn {
+      background: none;
+      border: none;
+      outline: none;
+      margin-left: 32px;
+    }
+  }
+
+  .modal-body {
+    h4 {
+      color: #3C4043;
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 16px;
+      font-weight: normal;
+    }
+
+    .benefits {
+      margin-bottom: 48px;
+    }
+
+    .add-transaction {
+      background: #3F51B5;
+      padding: 6px 12px;
+      cursor: pointer;
+      line-height: 20px;
+      color: white;
+      margin-top: 24px;
+      border: 0;
+      border-radius: 3px 0 3px 3px;
+    }
+  }
+}

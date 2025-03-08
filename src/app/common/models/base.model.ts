@@ -33,10 +33,18 @@ export enum EDetailRequestFields {
 }
 
 export enum ERecipeStatus {
-  waiting = 'Waiting for Clarification',
-  declined = 'Declined',
-  cancelled = 'Cancelled',
-  approved = 'Approved',
+  waiting = 'waiting',
+  declined = 'declined',
+  cancelled = 'cancelled',
+  approved = 'approved',
+}
+export namespace ERecipeStatus {
+  export enum title {
+    waiting = 'Waiting for Clarification',
+    declined = 'Declined',
+    cancelled = 'Cancelled',
+    approved = 'Approved',
+  }
 }
 
 export enum EEmployeeFields {
@@ -50,10 +58,20 @@ export enum EEmployeeFields {
 }
 
 export enum ERequestStatus {
-  open = 'Open',
-  waiting = 'Waiting for Clarification',
-  processed = 'Processed',
+  open = 'open',
+  waiting = 'waiting',
+  processed = 'processed',
 }
+
+
+export namespace ERequestStatus {
+  export enum title {
+    open = 'Open',
+    waiting = 'Waiting for Clarification',
+    processed = 'Processed',
+  }
+}
+
 
 export interface IRequests {
   id: number,
@@ -87,4 +105,38 @@ export interface IEmployee {
   [EEmployeeFields.benefitProgram]: string;
   [EEmployeeFields.totalCompensation]: number;
   [EEmployeeFields.totalUsedCompensation]: number;
+}
+
+export enum EBenefitFields {
+  category = 'category',
+  limit = 'limit',
+  compensation = 'compensation',
+  total = 'total',
+  remaining = 'remaining',
+}
+
+export interface IBenefit {
+  id: string;
+  [EBenefitFields.category]: string;
+  [EBenefitFields.limit]: number;
+  [EBenefitFields.compensation]: number;
+  [EBenefitFields.total]: number;
+  [EBenefitFields.remaining]: number;
+}
+
+export enum ETransactionFields {
+  date = 'date',
+  category = 'category',
+  amount = 'amount',
+  amountUSD = 'amountUSD',
+  attachments = 'attachments',
+}
+
+export interface ITransaction {
+  id: string;
+  [ETransactionFields.date]: string;
+  [ETransactionFields.category]: string;
+  [ETransactionFields.amount]: number;
+  [ETransactionFields.amountUSD]: number;
+  [ETransactionFields.attachments]: string;
 }

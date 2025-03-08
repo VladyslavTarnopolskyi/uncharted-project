@@ -8,12 +8,13 @@ import {
   MatRow,
   MatRowDef, MatTable, MatTableDataSource
 } from '@angular/material/table';
-import { Router } from '@angular/router';
 import { EEmployeeFields, IEmployee } from '../../common/models/base.model';
 import { EMPLOYEES_DATA } from './employees.mock';
 import { MatPaginator } from '@angular/material/paginator';
 import { DatePickerComponent } from '../../common/components/date-picker/date-picker.component';
 import { SearchInputComponent } from '../../common/components/search-input/search-input.component';
+import { MatDialog } from '@angular/material/dialog';
+import { UserComponent } from './user/user.component';
 
 @Component({
   selector: 'app-employees',
@@ -36,7 +37,7 @@ import { SearchInputComponent } from '../../common/components/search-input/searc
   styleUrl: './employees.component.scss'
 })
 export class EmployeesComponent implements AfterViewInit {
-  private readonly router = inject(Router);
+  readonly dialog = inject(MatDialog);
   displayedColumns: string[] = Object.keys(EEmployeeFields)
 
   dataSource = new MatTableDataSource<IEmployee>(EMPLOYEES_DATA);
@@ -76,9 +77,16 @@ export class EmployeesComponent implements AfterViewInit {
       name: EEmployeeFields.totalUsedCompensation,
       title: 'To Use Total Amount of compensation, USD',
     },
-  ]
+  ];
 
-  openDetail(row: IEmployee) {
-    this.router.navigate(['employees', row.id])
+  openDialog() {
+    const dialogRef = this.dialog.open(UserComponent, {
+      backdropClass: 'employee-overlay',
+      panelClass: 'employee-modal',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }

@@ -13,7 +13,7 @@ import {
   MatTableDataSource
 } from '@angular/material/table';
 import { DatePipe } from '@angular/common';
-import { EPagePath, ERequestFields, IRequests } from '../../common/models/base.model';
+import { EPagePath, ERequestFields, ERequestStatus, IRequests } from '../../common/models/base.model';
 import { Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { RequestsService } from './requests.service';
@@ -23,6 +23,7 @@ import { MatInputModule } from '@angular/material/input';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { SearchInputComponent } from '../../common/components/search-input/search-input.component';
 import { DatePickerComponent } from '../../common/components/date-picker/date-picker.component';
+import { REQUESTS_DATA } from './requests.mocks';
 
 
 @Component({
@@ -50,7 +51,8 @@ import { DatePickerComponent } from '../../common/components/date-picker/date-pi
 export class RequestsComponent implements OnInit, AfterViewInit {
   private readonly router = inject(Router);
   private readonly requestsService = inject(RequestsService);
-  displayedColumns: string[] = Object.keys(ERequestFields)
+  displayedColumns: string[] = Object.keys(ERequestFields);
+  eStatus = ERequestStatus;
 
   columns = [
     {
@@ -89,7 +91,8 @@ export class RequestsComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.requestsService.getRequests().subscribe(res => {
-      this.dataSource.data = res;
+      console.log(res);
+      this.dataSource.data = REQUESTS_DATA;
     })
   }
 
@@ -101,4 +104,7 @@ export class RequestsComponent implements OnInit, AfterViewInit {
     this.router.navigate([EPagePath.requests, EPagePath.request])
   }
 
+  getStatus(name: ERequestStatus): string {
+    return this.eStatus.title[name];
+  }
 }

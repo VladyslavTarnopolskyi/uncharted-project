@@ -2,3 +2,25 @@
   border-radius: 16px;
   background: white;
 }
+
+@mixin status-label {
+  font-size: 10px;
+  line-height: 20px;
+  padding: 0 12px;
+  color: white;
+  display: inline-flex;
+  border-radius: 10px;
+  text-wrap: nowrap;
+
+  &.approved {
+    background: #2563EB;
+  }
+
+  &.declined, &.canceled {
+    background: #525252;
+  }
+
+  &.waiting {
+    background: #DC2626;
+  }
+}
