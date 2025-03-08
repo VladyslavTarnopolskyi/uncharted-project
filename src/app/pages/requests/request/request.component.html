@@ -38,7 +38,7 @@
     ></tr>
   </table>
   <mat-paginator
-    [length]="100"
+    [length]="dataSource.data.length"
     [pageSize]="10"
     [pageSizeOptions]="[5, 10, 25, 100]"
     showFirstLastButtons
